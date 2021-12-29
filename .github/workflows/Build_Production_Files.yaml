@@ -2,7 +2,8 @@ name: Delpoy-Tools-Archive
 on:
   # trigger deployment on every push to main branch
   push:
-    branches: [main]
+    branches:
+      - master
   # trigger deployment manually
   workflow_dispatch:
 jobs:
@@ -16,6 +17,7 @@ jobs:
       - name: Install dependencies and build the website
         run: |
           yarn add -D vuepress@next
+          yarn add -D @vuepress/plugin-search@next
           yarn docs:build
       # ================================================================================================================
       - name: Deploy the website to github pages

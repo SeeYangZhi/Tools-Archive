@@ -1,0 +1,15 @@
+{
+  "name": "Tools-Archive",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SeeYangZhi/Tools-Archive.git",
+  "author": "See Yang Zhi <yangzhi.see@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.32"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

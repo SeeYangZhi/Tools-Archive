@@ -1,0 +1,27 @@
+name: Delpoy-Tools-Archive
+on:
+  # trigger deployment on every push to main branch
+  push:
+    branches: [main]
+  # trigger deployment manually
+  workflow_dispatch:
+jobs:
+  Delpoy-Tools-Archive:
+    runs-on: ubuntu-latest
+    steps:
+      # ================================================================================================================
+      - name: Retrieve the sources
+        uses: actions/checkout@v2
+      # ================================================================================================================
+      - name: Install dependencies and build the website
+        run: |
+          yarn add -D vuepress@next
+          yarn docs:build
+      # ================================================================================================================
+      - name: Deploy the website to github pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: ./docs/.vuepress/dist
+          commit-message: 'Website Deployed on Github Pages'
+          clean: true

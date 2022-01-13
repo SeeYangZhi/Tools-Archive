@@ -1,0 +1,1 @@
+const e={key:"v-2d0ad528",path:"/zh/",title:"\u8F6F\u4EF6\u5DE5\u7A0B\u5E08\u7684\u5DE5\u5177",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"Front-End / CSS",slug:"front-end-css",children:[]}],filePathRelative:"zh/README.md"};export{e as data};
